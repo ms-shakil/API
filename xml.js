@@ -40,6 +40,31 @@ const sendData =( ) =>{
 
 }
 
-sendData()
+const updateData= ()=>{
+     makeRequest("PUT","https://jsonplaceholder.typicode.com/posts/1",{
+        id: 1,
+        title: 'fooma',
+        body: 'bargdfdf',
+        userId: 1,
+     })
+}
+
+const updateSingalData= ()=>{
+    makeRequest("PATCH","https://jsonplaceholder.typicode.com/posts/1",{
+   
+       body: 'This is not my body',
+       
+    })
+}
+
+const deleteData= ()=>{
+    makeRequest("DELETE","https://jsonplaceholder.typicode.com/posts/1")
+}
+
+// updateData()
+// sendData()
 
 // getData()
+
+// updateSingalData()
+deleteData()
